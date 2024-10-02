@@ -1,0 +1,148 @@
+/* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative; /* Important for positioning .dot */
+}
+
+.navbar button {
+    background-color: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar-menu a.active {
+    color: #ff6347; /* Change this to your active color */
+    font-weight: bold;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+/* Ensure the cart icon container is relatively positioned */
+.navbar-cart-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Cart badge styling */
+  .cart-badge {
+    position: absolute;
+    top: -8px;  /* Adjust this value as needed to position it above the icon */
+    right: -8px; /* Adjust this value for horizontal alignment */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1; /* Ensure the text inside is centered */
+  }
+  
+  
+
+/* Media Queries */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+    .navbar-menu {
+        gap: 30px;
+    }
+    .navbar-right {
+        gap: 20px; /* Adjust gap if needed */
+    }
+    .navbar-right img {
+        width: 22px; /* Adjust size if needed */
+    }
+    .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 15px; /* Adjust gap if needed */
+    }
+    .navbar-right img {
+        width: 20px; /* Adjust size if needed */
+    }
+    .navbar-right button {
+        padding: 7px 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar {
+        gap: 20px;
+    }
+    .navbar-menu {
+        display: none;
+    }
+    .navbar-right button {
+        padding: 3px 30px;
+        font-size: 12px;
+    }
+    .navbar-right {
+        margin-right: 130px;
+    }
+    .navbar-right .navbar-search-icon {
+        display: none;
+    }
+}

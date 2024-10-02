@@ -1,0 +1,146 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Fade-out effect for modal overlay */
+  .modal-overlay.fade-out {
+    opacity: 0;
+  }
+  
+  /* Modal Container */
+  .modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade-out animation */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Fade-out effect for modal */
+  .modal.fade-out {
+    animation: fadeOut 0.3s ease-in-out;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    background-color: transparent;
+    color: #ff6347;
+    border: none;
+    font-size: 18px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: red;
+  }
+  
+  /* Heading */
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  input {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #ff6347;
+  }
+  
+  /* Buttons */
+  button[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Modal Footer */
+  .modal-footer {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Link for toggle between Sign In/Sign Up */
+  .modal-footer .link {
+    color: #ff6347;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .modal-footer .link:hover {
+    color: #ff4500;
+    text-decoration: underline;
+  }
+  
